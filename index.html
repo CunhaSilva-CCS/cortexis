@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cortexis — Estúdio de Tecnologia</title>
+<meta name="description" content="Cortexis é um estúdio de tecnologia que projeta e constrói sites, aplicativos mobile e produtos digitais sob medida.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand" aria-label="Cortexis — início">
+      <img class="brand-mark" src="img/logo-icon.png" alt="" width="32" height="29">
+      <span>Cortexis</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Processo</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#contato" class="btn btn-primary btn-small">Iniciar projeto</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <canvas id="constellation" aria-hidden="true"></canvas>
+    <div class="wrap hero-inner">
+      <p class="eyebrow"><span class="eyebrow-dot"></span>Estúdio de tecnologia</p>
+      <h1 class="hero-title">
+        Cortex pensa.<br>
+        Axis direciona.<br>
+        <span class="grad-text">Cortexis constrói.</span>
+      </h1>
+      <p class="hero-sub">
+        Projetamos e construímos sites, aplicativos mobile e produtos digitais
+        sob medida para negócios que precisam sair do papel — rápido, e bem feito.
+      </p>
+      <div class="hero-cta">
+        <a href="#contato" class="btn btn-primary">Iniciar um projeto</a>
+        <a href="#servicos" class="btn btn-ghost">Ver serviços</a>
+      </div>
+      <ul class="hero-tags">
+        <li>Sites institucionais</li>
+        <li>Apps mobile</li>
+        <li>MVPs &amp; produtos web</li>
+        <li>Suporte contínuo</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="divider" role="presentation"><span></span></div>
+
+  <section class="services" id="servicos">
+    <div class="wrap">
+      <p class="eyebrow"><span class="eyebrow-dot"></span>Serviços</p>
+      <h2 class="section-title">O que a gente entrega</h2>
+      <p class="section-sub">Quatro frentes, um mesmo compromisso: código limpo, prazos realistas e comunicação direta.</p>
+
+      <div class="card-grid">
+        <article class="card">
+          <svg class="card-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="5" y="8" width="30" height="24" rx="2" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M5 14h30" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="9" cy="11" r="1" fill="currentColor"/>
+            <circle cx="13" cy="11" r="1" fill="currentColor"/>
+            <circle cx="17" cy="23" r="1.6" fill="currentColor"/>
+            <circle cx="28" cy="19" r="1.6" fill="currentColor"/>
+            <circle cx="24" cy="27" r="1.6" fill="currentColor"/>
+            <path d="M17 23 28 19 M17 23 24 27" stroke="currentColor" stroke-width="1"/>
+          </svg>
+          <h3>Sites &amp; Landing Pages</h3>
+          <p>Sites institucionais, landing pages de alta conversão e lojas simples. Rápidos, responsivos e fáceis de manter.</p>
+        </article>
+
+        <article class="card">
+          <svg class="card-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="12" y="4" width="16" height="32" rx="3" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M12 9h16M12 31h16" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="20" cy="20" r="1.8" fill="currentColor"/>
+            <circle cx="16" cy="14" r="1.4" fill="currentColor"/>
+            <circle cx="25" cy="26" r="1.4" fill="currentColor"/>
+            <path d="M20 20 16 14 M20 20 25 26" stroke="currentColor" stroke-width="1"/>
+          </svg>
+          <h3>Aplicativos Mobile</h3>
+          <p>Apps nativos e híbridos para Android e iOS, do protótipo à publicação nas lojas.</p>
+        </article>
+
+        <article class="card">
+          <svg class="card-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M20 5 25 18 20 24 15 18Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M20 24v11" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="20" cy="5" r="1.5" fill="currentColor"/>
+            <circle cx="12" cy="30" r="1.4" fill="currentColor"/>
+            <circle cx="28" cy="30" r="1.4" fill="currentColor"/>
+            <path d="M20 24 12 30 M20 24 28 30" stroke="currentColor" stroke-width="1"/>
+          </svg>
+          <h3>Produtos &amp; MVPs</h3>
+          <p>Tem uma ideia? A gente transforma em um produto funcional para validar com usuários reais, rápido.</p>
+        </article>
+
+        <article class="card">
+          <svg class="card-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M20 6c-8 0-13 6-13 13.5C7 27 12 33 20 33s13-6 13-13.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M27 8l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="currentColor" opacity=".9"/>
+            <circle cx="20" cy="19.5" r="1.6" fill="currentColor"/>
+          </svg>
+          <h3>Manutenção &amp; Suporte</h3>
+          <p>Atualizações, correções e evolução contínua para o seu site ou app não ficar parado no tempo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" role="presentation"><span></span></div>
+
+  <section class="process" id="processo">
+    <div class="wrap">
+      <p class="eyebrow"><span class="eyebrow-dot"></span>Como trabalhamos</p>
+      <h2 class="section-title">Do primeiro rascunho ao ar</h2>
+      <p class="section-sub">Um fluxo direto, com você acompanhando cada etapa.</p>
+
+      <ol class="process-path">
+        <li>
+          <span class="node-dot"></span>
+          <div class="process-content">
+            <h3>Descoberta</h3>
+            <p>Entendemos seu negócio, seu público e o problema que o projeto precisa resolver.</p>
+          </div>
+        </li>
+        <li>
+          <span class="node-dot"></span>
+          <div class="process-content">
+            <h3>Design</h3>
+            <p>Wireframes e identidade visual alinhados à sua marca, pensados para conversão.</p>
+          </div>
+        </li>
+        <li>
+          <span class="node-dot"></span>
+          <div class="process-content">
+            <h3>Desenvolvimento</h3>
+            <p>Código limpo e performático, com atualizações frequentes sobre o progresso.</p>
+          </div>
+        </li>
+        <li>
+          <span class="node-dot"></span>
+          <div class="process-content">
+            <h3>Lançamento</h3>
+            <p>Testes, ajustes finais e publicação — no ar, com tudo funcionando.</p>
+          </div>
+        </li>
+        <li>
+          <span class="node-dot"></span>
+          <div class="process-content">
+            <h3>Suporte</h3>
+            <p>Acompanhamento contínuo para o seu produto evoluir junto com o seu negócio.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="divider" role="presentation"><span></span></div>
+
+  <section class="about" id="sobre">
+    <div class="wrap about-inner">
+      <div class="about-text">
+        <p class="eyebrow"><span class="eyebrow-dot"></span>Sobre</p>
+        <h2 class="section-title">Um estúdio enxuto, focado em entregar.</h2>
+        <p>
+          A Cortexis nasceu para atender empresas e empreendedores que precisam de
+          presença digital séria, sem a burocracia — nem o preço — de uma agência grande.
+          Trabalhamos de perto com cada cliente, com comunicação direta e prazos realistas,
+          do primeiro rascunho ao produto no ar.
+        </p>
+        <ul class="value-chips">
+          <li>Comunicação direta</li>
+          <li>Código limpo</li>
+          <li>Prazos realistas</li>
+          <li>Preço justo</li>
+        </ul>
+      </div>
+      <svg class="about-graphic" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+        <g class="graphic-nodes">
+          <circle cx="100" cy="30" r="3"/><circle cx="150" cy="55" r="2.4"/>
+          <circle cx="40" cy="70" r="2.4"/><circle cx="170" cy="110" r="2.8"/>
+          <circle cx="55" cy="130" r="3.2"/><circle cx="110" cy="160" r="2.4"/>
+          <circle cx="30" cy="160" r="2"/><circle cx="140" cy="170" r="2"/>
+        </g>
+        <g class="graphic-lines" stroke="currentColor" stroke-width="1" opacity=".45">
+          <path d="M100 30 150 55 M100 30 40 70 M150 55 170 110 M40 70 55 130 M170 110 110 160 M55 130 110 160 M55 130 30 160 M110 160 140 170"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <div class="divider" role="presentation"><span></span></div>
+
+  <section class="contact" id="contato">
+    <div class="wrap contact-inner">
+      <div class="contact-intro">
+        <p class="eyebrow"><span class="eyebrow-dot"></span>Contato</p>
+        <h2 class="section-title">Tem um projeto em mente?</h2>
+        <p class="section-sub">Conte um pouco sobre o que você precisa. A gente responde o mais rápido possível.</p>
+
+        <div class="contact-info">
+          <a href="mailto:contato@cortexis.com">contato@cortexis.com</a>
+          <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <label>
+          Nome
+          <input type="text" name="nome" required>
+        </label>
+        <label>
+          E-mail
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Tipo de projeto
+          <select name="tipo">
+            <option>Site institucional</option>
+            <option>Landing page</option>
+            <option>Aplicativo mobile</option>
+            <option>MVP / Produto digital</option>
+            <option>Outro</option>
+          </select>
+        </label>
+        <label>
+          Mensagem
+          <textarea name="mensagem" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+        <p class="form-note" id="formNote" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a href="#top" class="brand brand-footer">
+      <img class="brand-mark" src="img/logo-icon.png" alt="" width="26" height="23">
+      <span>Cortexis</span>
+    </a>
+    <nav class="footer-nav">
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Processo</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <p class="footer-meta">cortexis.com · © 2026 Cortexis. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

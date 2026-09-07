@@ -47,29 +47,53 @@
   }
 
   /* ---------------------------------------------------------
-     Contact form -> mailto fallback (static site, no backend)
+     Contact form -> EmailJS (static site, no backend)
      --------------------------------------------------------- */
+  const EMAILJS_PUBLIC_KEY = "etPTY-7kzhoZXLsB5";
+  const EMAILJS_SERVICE_ID = "service_hh2a7pk";
+  const EMAILJS_TEMPLATE_ID = "template_tea124a";
+
+  if (window.emailjs) {
+    window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  }
+
   const form = document.getElementById("contactForm");
   const formNote = document.getElementById("formNote");
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const data = new FormData(form);
+      const submitBtn = form.querySelector('button[type="submit"]');
+
       const nome = (data.get("nome") || "").toString().trim();
-      const email = (data.get("email") || "").toString().trim();
       const tipo = (data.get("tipo") || "").toString().trim();
       const mensagem = (data.get("mensagem") || "").toString().trim();
 
-      const subject = `Novo projeto: ${tipo} — ${nome}`;
-      const body = `Nome: ${nome}\nE-mail: ${email}\nTipo de projeto: ${tipo}\n\nMensagem:\n${mensagem}`;
-      const mailto = `mailto:contato@cortexis.com?subject=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(body)}`;
+      const params = {
+        name: nome,
+        email: (data.get("email") || "").toString().trim(),
+        title: `Novo projeto: ${tipo}`,
+        message: `Tipo de projeto: ${tipo}\n\n${mensagem}`,
+      };
 
-      window.location.href = mailto;
-      if (formNote) {
-        formNote.textContent = "Abrindo seu app de e-mail para enviar a mensagem...";
-      }
+      if (submitBtn) submitBtn.disabled = true;
+      if (formNote) formNote.textContent = "Enviando mensagem...";
+
+      window.emailjs
+        .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
+        .then(() => {
+          if (formNote) formNote.textContent = "Mensagem enviada! A gente responde em breve.";
+          form.reset();
+        })
+        .catch(() => {
+          if (formNote) {
+            formNote.textContent =
+              "Não foi possível enviar agora. Tente novamente ou escreva para cortexistech@gmail.com.";
+          }
+        })
+        .finally(() => {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 

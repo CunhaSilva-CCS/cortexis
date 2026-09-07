@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "target": "cortexistech",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "README.md"
+    ]
+  }
+}

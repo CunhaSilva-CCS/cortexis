@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "cortexis-site-18a82"
+  },
+  "targets": {
+    "cortexis-site-18a82": {
+      "hosting": {
+        "cortexistech": [
+          "cortexistech"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

@@ -279,6 +279,126 @@ img, svg { display: block; max-width: 100%; }
 .card h3 { font-size: 18px; margin-bottom: 10px; color: var(--ink); }
 .card p { font-size: 14.5px; color: var(--muted); margin: 0; }
 
+.services .card-grid .card {
+  display: flex;
+  flex-direction: column;
+  min-height: 232px;
+}
+.services .card-grid .card-link { margin-top: auto; padding-top: 16px; }
+
+/* ============================================================
+   Page hero (secondary pages, e.g. portfolio)
+   ============================================================ */
+.page-hero { padding: 96px 0 56px; }
+.page-hero .section-sub { max-width: 60ch; }
+
+/* ============================================================
+   Portfolio
+   ============================================================ */
+.portfolio { padding: 0 0 88px; }
+.portfolio-grid {
+  margin-top: 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 258px));
+  justify-content: center;
+}
+.portfolio-card { display: flex; flex-direction: column; }
+.portfolio-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--cyan);
+  margin-bottom: 20px;
+}
+.portfolio-thumb svg { width: 40px; height: 40px; }
+.portfolio-thumb-img { padding: 0; overflow: hidden; }
+.portfolio-thumb-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.portfolio-thumb-icon img { width: 96px; height: 96px; object-fit: contain; border-radius: 20px; }
+.portfolio-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cyan);
+  margin: 0 0 8px;
+}
+.portfolio-card h3 { font-size: 18px; margin-bottom: 8px; color: var(--ink); }
+.portfolio-card p { font-size: 14.5px; color: var(--muted); }
+.portfolio-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 4px 0 18px;
+  padding: 0;
+}
+.portfolio-stack li {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--silver);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+.portfolio-link {
+  margin-top: auto;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--cyan);
+  width: fit-content;
+}
+.portfolio-link:hover { text-decoration: underline; }
+.portfolio-note {
+  margin: 40px 0 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+.portfolio-note a { color: var(--cyan); text-decoration: none; }
+.portfolio-note a:hover { text-decoration: underline; }
+
+/* ============================================================
+   Category / secondary page nav
+   ============================================================ */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  margin-bottom: 24px;
+  transition: color 0.15s ease;
+}
+.back-link:hover { color: var(--cyan); }
+
+.card-link {
+  display: inline-block;
+  margin-top: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--cyan);
+}
+.card-link:hover { text-decoration: underline; }
+
+.contact-cta { padding: 88px 0; }
+.contact-cta-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+.contact-cta-inner .section-title { margin-bottom: 8px; }
+.contact-cta-inner .section-sub { margin: 0; }
+
 /* ============================================================
    Process path
    ============================================================ */
@@ -434,7 +554,7 @@ img, svg { display: block; max-width: 100%; }
   gap: 20px;
 }
 .brand-footer { font-size: 16px; }
-.footer-nav { display: flex; gap: 24px; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; }
 .footer-nav a { text-decoration: none; color: var(--muted); font-size: 14px; }
 .footer-nav a:hover { color: var(--cyan); }
 .footer-meta { color: var(--muted); font-size: 13px; margin: 0; font-family: var(--font-mono); }
@@ -481,4 +601,6 @@ img, svg { display: block; max-width: 100%; }
   .card-grid { grid-template-columns: 1fr; }
   .services, .process, .about, .contact { padding: 64px 0; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
+  .page-hero { padding: 56px 0 40px; }
+  .contact-cta-inner { text-align: left; }
 }
